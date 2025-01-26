@@ -27,7 +27,7 @@ class MyArray {
         this.length--
         return LastItem
     }
-    
+
     // custom shift method
     shift(){
         const firstItem = this.data[0]
