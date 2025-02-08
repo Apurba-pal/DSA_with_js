@@ -38,7 +38,13 @@ class MyArray {
         this.length--
         return firstItem
     }
-
+    unshift(value){
+        this.length++
+        for(var i=this.length-2; i>=0; i--){
+            this.data[i+1] = this.data[i]
+        }
+        this.data[0] = value
+    }
     // custom delete by index method
     DeleteByIndex(index){
         const indexItem = this.data[index]
@@ -62,6 +68,7 @@ console.log(NewArr)
 // console.log("pop - ",NewArr.pop())
 // console.log(NewArr)
 // console.log("shift - ",NewArr.shift())
+console.log("unshift - ",NewArr.unshift("F"))
 // console.log(NewArr)
-console.log("Delete by index - ",NewArr.DeleteByIndex(2))
+// console.log("Delete by index - ",NewArr.DeleteByIndex(2))
 console.log(NewArr)
