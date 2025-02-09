@@ -45,6 +45,11 @@ class MyArray {
         }
         this.data[0] = value
     }
+    
+    insertByIndex(value, index){
+        
+    }
+
     // custom delete by index method
     DeleteByIndex(index){
         const indexItem = this.data[index]

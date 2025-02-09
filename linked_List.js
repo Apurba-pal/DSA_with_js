@@ -13,6 +13,8 @@ class Linked_list {
     this.tail = this.head; // assign the tail to head
     this.length = 1;
   }
+
+
   // push method
   // new node at the end of the linkedlist
 
@@ -27,6 +29,8 @@ class Linked_list {
     this.tail = newNode; // tail's will be shifted to the new node
     this.length++; // increment the length of the LL
   }
+
+
   pop() {
     if (!this.head) {
       return undefined;
@@ -47,6 +51,8 @@ class Linked_list {
     }
     return temp; // returend the popped element
   }
+
+
   unshift(value) {
     let newNode = new Node(value); // create new node
     if (!this.head) {
@@ -59,6 +65,8 @@ class Linked_list {
     this.length++;
     return this;
   }
+
+
   shift() {
     if (!this.head) return undefined;
     let temp = this.head; // assign a new variable temp to head 
@@ -67,15 +75,20 @@ class Linked_list {
     this.length-- 
     if(this.length === 0) this.tail = null; 
   }
+
+
   getFirst(){
     return this.head;
   }
+
 
   getLast(){
     let temp = this.head;
     while(temp.next != null) temp = temp.next
     return temp;
   }
+
+
   getindex(index){
     let temp = this.head
     for(let i = 0 ; i < index; i++){
@@ -83,6 +96,8 @@ class Linked_list {
     }
     return temp;
   }
+
+
   Update(value, index){ // complexity ?
     let temp = this.head;
     for(let i = 0 ; i < index; i++){
@@ -90,6 +105,8 @@ class Linked_list {
     }
     temp.data = value
   }
+
+
   insert(value, index){
     if(index === 0) return this.unshift(value)
     if(index === this.length) return this.push(value)
@@ -103,9 +120,17 @@ class Linked_list {
     temp.next = newNode
     this.length++
   }
+
+
   size(){
     return this.length
   }
+
+
+  clear(){
+    this.head.next = null
+  }
+  
 }
 
 const myLinkedList = new Linked_list(1);
