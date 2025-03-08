@@ -79,9 +79,9 @@ DoubllyLinkedList.push(1);
 DoubllyLinkedList.push(2);
 DoubllyLinkedList.push(3);
 DoubllyLinkedList.push(4);
-DoubllyLinkedList.pop();      // removes 4
-DoubllyLinkedList.unshift(100); // adds 100 at the beginning
-console.log("Before shift:", DoubllyLinkedList); // to verify initial head
-DoubllyLinkedList.shift();    // should remove 100
-console.log("After shift:", DoubllyLinkedList);  // to verify new head
+DoubllyLinkedList.pop();
+DoubllyLinkedList.unshift(100);
+console.log("Before shift:", DoubllyLinkedList);
+DoubllyLinkedList.shift();
+console.log("After shift:", DoubllyLinkedList);  // remove 100
 console.log(DoubllyLinkedList);
