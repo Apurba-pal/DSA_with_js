@@ -47,7 +47,12 @@ class MyArray {
     }
     
     insertByIndex(value, index){
-        
+        for(let i = this.length; i > index; i--){
+            this.data[i] = this.data[i-1]
+        }
+        this.data[index] = value
+        this.length++
+        return this.length
     }
 
     // custom delete by index method
@@ -73,7 +78,8 @@ console.log(NewArr)
 // console.log("pop - ",NewArr.pop())
 // console.log(NewArr)
 // console.log("shift - ",NewArr.shift())
-console.log("unshift - ",NewArr.unshift("F"))
+// console.log("unshift - ",NewArr.unshift("F"))
 // console.log(NewArr)
 // console.log("Delete by index - ",NewArr.DeleteByIndex(2))
+console.log(NewArr.insertByIndex("F", 2))
 console.log(NewArr)
