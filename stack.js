@@ -31,3 +31,4 @@ s.push(90)
 
 console.log(s.pop())
 console.log(s.data)
+console.log(s.data.length)
