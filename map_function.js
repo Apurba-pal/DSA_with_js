@@ -10,3 +10,12 @@ var containsDuplicate = function(nums) {
 
     return false; // no duplicates
 };
+
+
+
+// to add an array into a hashmap 
+
+    // const map = new Map();
+    // for( num of nums){
+    //     map.set(num, (map.get(num) || 0) + 1);
+    // }
